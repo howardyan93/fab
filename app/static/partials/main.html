@@ -1,0 +1,25 @@
+<div blg-menu2></div>
+<div id="blog-body" class="container">
+    <div blg-breadcrumb></div>
+    <div id="blog-content" class="row">
+        <div id="blog-main" class="col-md-9">
+            <div class="row blog-wrapper" ng-repeat="blogPost in blogList">
+                <div class="col-md-2 blog-info">
+                    <p class="text-left"><span class="glyphicon glyphicon-user"></span><strong>Howardyan</strong></p>
+                    <p class="text-left"><span class="glyphicon glyphicon-comment"></span>{{ blogPost.commentsCount }} Comments</p>
+                    <p class="text-left"><span class="glyphicon glyphicon-folder-open"></span>{{ blogPost.viewedCount }} viewed</p>
+                </div>
+                <div class="col-md-10 blog-sub">
+                    <a href="#!/blogPost{{ blogPost.id}}"><h3><strong>{{blogPost.title }}</Strong></h3></a>
+                    <p>Posted: {{ blogPost.pubDatetime | date:'MM/dd/yyyy @ h:mma'}} </p>
+                    <hr />
+                    <p class="summary">{{ blogPost.sub }}</p>
+                </div>
+            </div>
+        </div>
+        <div blg-sidebar></div>
+    </div>
+    <div blg-pagination></div>
+</div>
+<hr />
+<div blg-footer></div>

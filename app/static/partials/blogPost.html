@@ -1,0 +1,61 @@
+<div blg-menu2></div>
+<div id="blog-body" class="container">
+    <div blg-breadcrumb></div>
+    <div id="blog-content" class="row">
+        <div id="blog-main" class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{ blogEntry.title }}</h1>
+                    <p>
+                        <span class="label label-default"><span class="glyphicon glyphicon-user"></span><strong> Howardyan</strong></span>
+                        <span class="label label-default"><span class="glyphicon glyphicon-comment"></span> {{ blogEntry.commentsCount }} Comments</span>
+                        <span class="label label-default"><span class="glyphicon glyphicon-folder-open"></span> {{ blogEntry.viewedCount}} viewed</span>
+                        <span class="label label-default"><span class="glyphicon glyphicon-calendar"></span> {{ blogEntry.pubDatetime}}</span>
+                        <a href="#!/{{ edit_page_url }}"><span class="label label-info"><span class="glyphicon glyphicon-edit"></span> Edit</span></a>
+                    </p>
+                    <div class="post-text" ng-bind-html="blogEntry.html"></div>
+                </div>
+                <div class="col-md-12 post-tags">
+                    <p>
+                        <span class="label label-primary">TAGS</span>
+                        <a ng-repeat="tag in blogEntry.tags" href="#!/Tag/{{ tag.tag_type}}/Page1">
+                            <span class="label label-default">{{ tag.tag_type }}</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="comments col-md-12">
+                    <div class="comment-wrapper row" ng-repeat="comment in comments">
+                    <div class="comment col-md-12">
+                        <div class="comment-info">
+                            <p class="text-center">{{ comment.author }}</p>
+                        </div>
+                        <div class="comment-body">
+                                <p>
+                                    <span class="label label-info"><span class="glyphicon glyphicon-sort-by-attributes"></span>{{ comment.id }}</span>
+                                    <span class="label label-default"><span class="glyphicon glyphicon-calendar"></span>{{ comment.timestamp}}</span>
+                                <p>{{ comment.body }}</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="write-comment col-md-12">
+                    <input type="hidden" ng-model="blogId"/>
+                    <form ng-submit="submit()" ng-controller="BlogViewCtrl">
+                        <div class="form-group">
+                            <textarea class="form-control height-auto-adjust" ng-model="commentText"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+                </div>
+                <div blg-sidebar></div>
+            </div>
+        </div>
+
+<hr />
+<div blg-footer></div>
+

@@ -1,0 +1,17 @@
+<div class="container"><nav>
+  <ul class="pagination">
+    <li class="{{ preDisable }}">
+      <a href="#!{{ url + (currentPage - 1) }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-repeat="page in pageList" class="{{ page.attr }}">
+      <a href="#!{{ url + page.index }}" >{{ page.index }}</a>
+    </li>
+    <li class="{{ nextDisable }}">
+      <a href="#!{{ url + (currentPage + 1) }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav></div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="angularBlogApp"> 
+    <head> 
+        <title>AngularJS Blog</title>             
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <link rel="stylesheet" href="static/lib-css/bootstrap.min.css"  media="screen"/>
+        <link rel="stylesheet" href="static/css/styles.css"  media="screen"/>
+
+        <script src="static/js/libs/jquery-1.10.2.min.js"></script>
+        <script src="static/js/libs/bootstrap.min.js"></script>
+        <script src="static/js/libs/angular.min.js"></script>
+        <script src="static/js/libs/angular-route.min.js"></script>
+        <script src="static/js/libs/angular-resource.min.js"></script>
+        <script src="static/js/libs/angular-cookies.min.js"></script>
+        <script src="static/js/libs/angular-sanitize.min.js"></script>
+
+
+        <script src="static/js/app.js"></script>
+        <script src="static/js/controllers.js"></script>
+        <script src="static/js/services.js"></script>
+        <script src="static/js/businessServices.js"></script>
+        <script src="static/js/directives.js"></script>
+
+
+    </head> 
+    <body>
+        <div ng-view></div>
+    </body> 
+</html> 

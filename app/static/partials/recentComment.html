@@ -1,0 +1,7 @@
+<div class="row wrapperbar">
+    <div class="col-md-12">
+        <h5 class="text-left"><span class="label label-default"><span class="glyphicon glyphicon-comment"></span> Comments</span></h5>
+        <hr />
+        <p ng-repeat="comment in recent_comments"><a href="#!/blogPost{{ comment.post_id }}">{{ comment.body }}</a></p>
+    </div>
+</div>

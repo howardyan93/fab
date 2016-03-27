@@ -1,0 +1,11 @@
+<div class="row wrapperbar">
+    <div class="col-md-12">
+        <h5 class="text-left"><span class="label label-default"><span class="glyphicon glyphicon-tags"></span> Tags</span></h5>
+        <hr />
+            <p style="float: left" ng-repeat="tag in tags">
+                <a href="#!/Tag/{{ tag.tag_type}}/Page1">
+                    <span class="label label-default">{{ tag.tag_type }}</span>
+                </a>
+            </p>
+    </div>
+</div>
