@@ -21,7 +21,7 @@ Admin就是参考了Flask-Admin的例子，去掉了注册项。目前是个人�
 
 [NodeMeanBlog](https://github.com/KenWilliamson/NodeMeanBlog_for_LearningAngularJS.git)
 
-[Sample Web](http://www.raspberry.ren)
+[Sample Web](http://www.digiotaku.com)
 
 # 如何使用
 
